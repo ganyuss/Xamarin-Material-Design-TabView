@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Material_TabView.TabView.TabView"
+             x:Name="TabViewContext">
+    
+    <ContentView x:Name="ShownTabContent" VerticalOptions="Fill" HorizontalOptions="Fill" />
+    
+    <Grid x:Name="TabContainer" HeightRequest="{Binding TabContainerHeight, Source={x:Reference TabViewContext}}"></Grid>
+    
+</StackLayout>
