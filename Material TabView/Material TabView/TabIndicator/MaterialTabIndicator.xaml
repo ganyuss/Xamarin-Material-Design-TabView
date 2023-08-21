@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaterialTabView.TabView.MaterialTabIndicator"
+             Padding="0, 12, 0, 16"
+             Spacing="4"
+             x:Name="TabIndicatorContext">
+    <Grid
+        HeightRequest="32"
+        VerticalOptions="Center"
+        HorizontalOptions="FillAndExpand">
+        <BoxView 
+            HeightRequest="32"
+            WidthRequest="64"
+            CornerRadius="16"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Color="{Binding SelectionIndicatorColor, Source={x:Reference TabIndicatorContext}}"
+            x:Name="SelectionIndicator"
+            />
+        <Image 
+            HeightRequest="24"
+            WidthRequest="24"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Source="{Binding FinalIconImageSource, Source={x:Reference TabIndicatorContext}}"
+        />
+    </Grid>
+    
+    <Label Text="{Binding Label, Source={x:Reference TabIndicatorContext}}"
+           VerticalOptions="Center"
+           HorizontalOptions="CenterAndExpand"
+           FontSize="12"
+           TextColor="{Binding FinalTextColor, Source={x:Reference TabIndicatorContext}}" />
+</StackLayout>
