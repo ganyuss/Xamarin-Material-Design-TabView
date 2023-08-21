@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Material_TabView
+namespace MaterialTabView
 {
     public partial class TabViewTestPage : ContentPage
     {

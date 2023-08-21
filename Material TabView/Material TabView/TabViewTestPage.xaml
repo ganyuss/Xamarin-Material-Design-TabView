@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:tabView="clr-namespace:Material_TabView.TabView;assembly=Material TabView"
-             x:Class="Material_TabView.TabViewTestPage">
+             xmlns:tabView="clr-namespace:MaterialTabView.TabView;assembly=Material TabView"
+             x:Class="MaterialTabView.TabViewTestPage">
              
     <StackLayout>
         <!-- Place new controls here -->
@@ -13,10 +13,10 @@
         <tabView:TabView HeightRequest="200" HorizontalOptions="Fill">
             <tabView:TabView.Tabs>
                 <tabView:Tab>
-                    <tabView:Tab.TabView>
+                    <tabView:Tab.TabIndicator>
                         <BoxView Color="Green" />
                         <!--<Label Text="Tab 1" BackgroundColor="Firebrick" TextColor="White" />-->
-                    </tabView:Tab.TabView>
+                    </tabView:Tab.TabIndicator>
                     
                     <Label Text="ZZZZZZZZZZZZZZZZZZZZZZ" 
                            VerticalOptions="Center" 
@@ -24,9 +24,9 @@
                 </tabView:Tab>
                 
                 <tabView:Tab>
-                    <tabView:Tab.TabView>
+                    <tabView:Tab.TabIndicator>
                         <BoxView Color="Red" />
-                    </tabView:Tab.TabView>
+                    </tabView:Tab.TabIndicator>
                     
                     <Label Text="XXXXXXXXXXXXXXXXXXXXXXX" 
                            VerticalOptions="Center" 

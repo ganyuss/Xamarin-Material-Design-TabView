@@ -8,4 +8,11 @@
         <PackageReference Include="JetBrains.Annotations" Version="2023.2.0" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="TabIndicator\MaterialTabIndicator.xaml.cs">
+        <DependentUpon>MaterialTabIndicator.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

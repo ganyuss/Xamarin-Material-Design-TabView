@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
-namespace Material_TabView.TabView
+namespace MaterialTabView.TabView
 {
     //[ContentProperty(nameof(TabView.Tabs))]
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -17,7 +17,7 @@ namespace Material_TabView.TabView
 
         public IList<Tab> Tabs => _tabs;
 
-        public static readonly BindableProperty TabContainerHeightProperty = BindableProperty.Create(nameof(TabContainerHeight), typeof(double), typeof(TabView), 50.0);
+        public static readonly BindableProperty TabContainerHeightProperty = BindableProperty.Create(nameof(TabContainerHeight), typeof(double), typeof(TabView), 80.0);
 
         public double TabContainerHeight
         {
@@ -88,16 +88,16 @@ namespace Material_TabView.TabView
 
                 TabModels.Add(tabModel);
 
-                View tabView = tab.TabView;
-                tabView.BindingContext = tabModel;
-                tabView.GestureRecognizers.Add(new TapGestureRecognizer()
+                View tabIndicator = tab.TabIndicator;
+                tabIndicator.BindingContext = tabModel;
+                tabIndicator.GestureRecognizers.Add(new TapGestureRecognizer()
                 {
                     Command = new Command(() => { tabModel.Selected = true; })
                 });
-                tabView.HorizontalOptions = LayoutOptions.FillAndExpand;
-                tabView.VerticalOptions = LayoutOptions.FillAndExpand;
+                tabIndicator.HorizontalOptions = LayoutOptions.FillAndExpand;
+                tabIndicator.VerticalOptions = LayoutOptions.FillAndExpand;
 
-                TabContainer.Children.Add(tabView, i, 0);
+                TabContainer.Children.Add(tabIndicator, i, 0);
             }
         }
 

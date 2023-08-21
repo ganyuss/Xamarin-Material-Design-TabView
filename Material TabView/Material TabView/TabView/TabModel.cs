@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using Xamarin.Forms;
 
-namespace Material_TabView.TabView
+namespace MaterialTabView.TabView
 {
     public class TabModel : INotifyPropertyChanged
     {

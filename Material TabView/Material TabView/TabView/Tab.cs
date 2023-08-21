@@ -3,14 +3,14 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
-namespace Material_TabView.TabView
+namespace MaterialTabView.TabView
 {
 
     [ContentProperty(nameof(TabContent))]
     public class Tab : INotifyPropertyChanged
     {
         private View _content;
-        private View _tabView;
+        private View _tabIndicator;
 
         public View TabContent
         {
@@ -18,10 +18,10 @@ namespace Material_TabView.TabView
             set => SetField(ref _content, value);
         }
 
-        public View TabView
+        public View TabIndicator
         {
-            get => _tabView;
-            set => SetField(ref _tabView, value);
+            get => _tabIndicator;
+            set => SetField(ref _tabIndicator, value);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
