@@ -3,10 +3,16 @@
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Material_TabView.TabView.TabView"
-             x:Name="TabViewContext">
+             x:Name="TabViewContext" MinimumHeightRequest="50"
+             Spacing="0">
     
-    <ContentView x:Name="ShownTabContent" VerticalOptions="Fill" HorizontalOptions="Fill" />
+    <ContentView x:Name="ShownTabContent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" />
     
-    <Grid x:Name="TabContainer" HeightRequest="{Binding TabContainerHeight, Source={x:Reference TabViewContext}}"></Grid>
+    <Grid x:Name="TabContainer" 
+          HorizontalOptions="Fill"
+          HeightRequest="{Binding TabContainerHeight, Source={x:Reference TabViewContext}}"
+          ColumnSpacing="0"
+          BackgroundColor="{Binding TabContainerBackgroundColor, Source={x:Reference TabViewContext}}"
+           />
     
 </StackLayout>

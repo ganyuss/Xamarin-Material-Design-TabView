@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tabView="clr-namespace:Material_TabView.TabView;assembly=Material TabView"
+             x:Class="Material_TabView.TabViewTestPage">
+             
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        
+        <tabView:TabView HeightRequest="200" HorizontalOptions="Fill">
+            <tabView:TabView.Tabs>
+                <tabView:Tab>
+                    <tabView:Tab.TabView>
+                        <BoxView Color="Green" />
+                        <!--<Label Text="Tab 1" BackgroundColor="Firebrick" TextColor="White" />-->
+                    </tabView:Tab.TabView>
+                    
+                    <Label Text="ZZZZZZZZZZZZZZZZZZZZZZ" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" />
+                </tabView:Tab>
+                
+                <tabView:Tab>
+                    <tabView:Tab.TabView>
+                        <BoxView Color="Red" />
+                    </tabView:Tab.TabView>
+                    
+                    <Label Text="XXXXXXXXXXXXXXXXXXXXXXX" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" />
+                </tabView:Tab>
+            </tabView:TabView.Tabs>
+        </tabView:TabView>
+        
+        <BoxView Color="Brown"/>
+    </StackLayout>
+
+
+</ContentPage>
