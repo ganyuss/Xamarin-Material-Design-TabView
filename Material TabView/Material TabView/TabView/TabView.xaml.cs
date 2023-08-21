@@ -74,8 +74,6 @@ namespace Material_TabView.TabView
             {
                 TabContainer.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             }
-            
-            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>" + Tabs.Count);
 
             for (var i = 0; i < Tabs.Count; i++)
             {

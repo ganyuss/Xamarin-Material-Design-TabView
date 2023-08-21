@@ -6,7 +6,7 @@
              x:Name="TabViewContext" MinimumHeightRequest="50"
              Spacing="0">
     
-    <ContentView x:Name="ShownTabContent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" />
+    <ContentView x:Name="ShownTabContent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
     
     <Grid x:Name="TabContainer" 
           HorizontalOptions="Fill"
